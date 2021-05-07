@@ -18,7 +18,7 @@ public class PublisherSender implements Runnable {
     public void run(){
         System.out.println("THREAD IS WORKING");
 
-        while(true){
+        while(client.isConnected()){
             message.setQos(qos);
             System.out.println(clientId + " Publishing message: " + message + " ...");
 
